@@ -23,11 +23,11 @@
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>homework</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
-    <ProjectName>program</ProjectName>
+    <ProjectName>homework</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -143,6 +143,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BenefitTypeDAO.cpp" />
+    <ClCompile Include="DataSource.cpp" />
+    <ClCompile Include="GoodsDAO.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="ItemGenerator.cpp" />
+    <ClCompile Include="recognition.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BenefitTypeDAO.h" />
+    <ClInclude Include="DataSource.h" />
+    <ClInclude Include="GoodsDAO.h" />
+    <ClInclude Include="ItemGenerator.h" />
+    <ClInclude Include="recognition.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

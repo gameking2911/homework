@@ -21,12 +21,42 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="stubBenefitTypeDAO.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stubGoodsDAO.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="fakeDataSource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="unittest1.cpp">
+    <ClCompile Include="RecognitionTest.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GoodsDAOTest.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="BenefitTypeDAOTest.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemGeneratorTest.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ShoppingList.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stubBenefitTypeDAO.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stubGoodsDAO.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="fakeDataSource.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
