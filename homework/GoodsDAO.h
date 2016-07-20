@@ -10,8 +10,7 @@ public:
 	virtual ~GoodsDAO();
 
 public:
-	std::string getName(const std::string&);
-	int getPrice(const std::string&);
+	int getPrice(const std::string& barcode);
 	std::string getName(const std::string& barcode);
 private:
 

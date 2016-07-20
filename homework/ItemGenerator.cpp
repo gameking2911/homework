@@ -13,10 +13,34 @@ ItemGenerator::~ItemGenerator()
 
 double ItemGenerator::getSum()
 {
-	return m_sum;
+	if (bdao->getType() == 0x0001)
+	{
+		int free_num = m_recognition->getNumber() / 3;
+
+		int sum = (m_recognition->getNumber() - free_num) * gdao->getPrice();
+	}
+
+	else
+	{
+		int sum = m_recognition->getNumber()*gdao->getPrice()*0.95;
+	}
+
+	return sum;
 }
 
 double ItemGenerator::getSaved()
 {
-	return m_saved;
+	if (bdao->getType() == 0x0001)
+	{
+		int free_num = m_recognition->getNumber() / 3;
+		int saved = free_num * gdao->getPrice();
+	}
+	else
+	{
+		int saved = m_recognition->getNumber()*gdao->getPrice()*0.95;
+
+
+	}
+
+	return saved;
 }

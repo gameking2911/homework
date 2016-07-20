@@ -8,10 +8,11 @@ public:
 	BenefitTypeDAO(Recognition*);
 	virtual ~BenefitTypeDAO();
 
-	//public:
-	//	string getName(const std::string&);
-	//	int getPrice(const std::string&);
-	//private:
+public:
+	string getName(const std::string&);
+	int getPrice(const std::string&);
+private:
+	
 
 };
 

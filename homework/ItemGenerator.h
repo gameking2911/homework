@@ -19,6 +19,7 @@ private:
 	double m_saved;
 	GoodsDAO* m_gdao;
 	BenefitTypeDAO* m_bdao;
+	Recognition* m_recognition;
 };
 
 

@@ -158,6 +158,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="fakeBenefitTypeSource.h" />
     <ClInclude Include="fakeDataSource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="stubBenefitTypeDAO.h" />
@@ -166,6 +167,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BenefitTypeDAOTest.cpp" />
+    <ClCompile Include="fakeBenefitTypeSource.cpp" />
     <ClCompile Include="fakeDataSource.cpp" />
     <ClCompile Include="RecognitionTest.cpp" />
     <ClCompile Include="ShoppingList.cpp" />
