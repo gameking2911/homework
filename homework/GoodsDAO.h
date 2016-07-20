@@ -3,17 +3,19 @@
 #define _GOODSDAO_H_
 #include <string>
 #include "recognition.h"
+#include "DataSource.h"
 class GoodsDAO
 {
 public:
-	GoodsDAO(Recognition*);
+	GoodsDAO(DataSource*);
+	GoodsDAO();
 	virtual ~GoodsDAO();
 
 public:
-	int getPrice(const std::string& barcode);
+	double getPrice(const std::string& barcode);
 	std::string getName(const std::string& barcode);
 private:
-
+	DataSource* pDataSource;
 };
 
 

@@ -27,7 +27,7 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -144,18 +144,24 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BenefitTypeDAO.cpp" />
-    <ClCompile Include="DataSource.cpp" />
+    <ClCompile Include="BenefitTypeSource.cpp" />
+    <ClCompile Include="DataSource.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="GoodsDAO.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="ItemGenerator.cpp" />
     <ClCompile Include="recognition.cpp" />
+    <ClCompile Include="ShoppingList.h.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BenefitTypeDAO.h" />
+    <ClInclude Include="BenefitTypeSource.h" />
     <ClInclude Include="DataSource.h" />
     <ClInclude Include="GoodsDAO.h" />
     <ClInclude Include="ItemGenerator.h" />
     <ClInclude Include="recognition.h" />
+    <ClInclude Include="ShoppingList.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

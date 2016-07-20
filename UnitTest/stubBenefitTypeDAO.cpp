@@ -1,4 +1,15 @@
+#include "stdafx.h"
 #include "stubBenefitTypeDAO.h"
+
+stubBenefitTypeDAO::stubBenefitTypeDAO()
+{
+
+}
+
+stubBenefitTypeDAO::~stubBenefitTypeDAO()
+{
+
+}
 
 void stubBenefitTypeDAO::setType(int type)
 {

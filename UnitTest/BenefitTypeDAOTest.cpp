@@ -12,11 +12,11 @@ namespace UnitTest
 	public:
 		TEST_METHOD(should_return_buy2onefree_when_search_by_ITEM000001)
 		{
-			// TODO: 在此输入测试代码
-			fakeBenefitTypeSource* data = new fakeBenefitTypeSource;
-
-			BenefitTypeDAO* pDao = new BenefitTypeDAO(data);
-			Assert::AreEqual("买2赠1", pDao->getType("ITEM000001"));
+			
+			fakeBenefitTypeSource* pDataSource = new fakeBenefitTypeSource;
+			pDataSource->setInfo("ITEM000001", 1);
+			BenefitTypeDAO* pDao = new BenefitTypeDAO(pDataSource);
+			Assert::AreEqual(1, pDao->getType("ITEM000001"));
 		}
 
 

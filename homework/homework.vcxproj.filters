@@ -27,6 +27,12 @@
     <ClCompile Include="DataSource.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="BenefitTypeSource.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ShoppingList.h.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="recognition.h">
@@ -42,6 +48,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="DataSource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BenefitTypeSource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ShoppingList.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

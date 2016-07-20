@@ -1,9 +1,10 @@
 #include "ItemGenerator.h"
 
-ItemGenerator::ItemGenerator(GoodsDAO* gdao, BenefitTypeDAO* bdao)
+ItemGenerator::ItemGenerator(GoodsDAO* gdao, BenefitTypeDAO* bdao,Recognition* recognition)
 {
 	m_gdao = gdao;
 	m_bdao = bdao;
+	m_recognition = recognition;
 }
 
 ItemGenerator::~ItemGenerator()
@@ -11,33 +12,46 @@ ItemGenerator::~ItemGenerator()
 
 }
 
-double ItemGenerator::getSum()
+double ItemGenerator::getSum(const std::string input)
 {
-	if (bdao->getType() == 0x0001)
-	{
-		int free_num = m_recognition->getNumber() / 3;
 
-		int sum = (m_recognition->getNumber() - free_num) * gdao->getPrice();
+	std::string barcode;
+	int number;
+	double sum;
+	m_recognition->recognize(input, barcode, number);
+
+	if (m_bdao->getType(barcode) == 1)
+	{
+
+		int free_num = number / 3;
+
+		sum = (number - free_num) * m_gdao->getPrice(barcode);
 	}
 
 	else
 	{
-		int sum = m_recognition->getNumber()*gdao->getPrice()*0.95;
+		sum = number * m_gdao->getPrice(barcode)*0.95;
 	}
 
 	return sum;
 }
 
-double ItemGenerator::getSaved()
+double ItemGenerator::getSaved(const std::string input)
 {
-	if (bdao->getType() == 0x0001)
+	std::string barcode;
+	int number;
+	double sum;
+	double saved;
+	m_recognition->recognize(input, barcode, number);
+
+	if (m_bdao->getType(barcode) == 1)
 	{
-		int free_num = m_recognition->getNumber() / 3;
-		int saved = free_num * gdao->getPrice();
+		int free_num = number / 3;
+		saved = free_num * m_gdao->getPrice(barcode);
 	}
 	else
 	{
-		int saved = m_recognition->getNumber()*gdao->getPrice()*0.95;
+		saved = number*m_gdao->getPrice(barcode)*0.95;
 
 
 	}

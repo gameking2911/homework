@@ -1,6 +1,11 @@
 #include "GoodsDAO.h"
 
-GoodsDAO::GoodsDAO(data)
+GoodsDAO::GoodsDAO(DataSource* dataSource)
+{
+	pDataSource = dataSource;
+}
+
+GoodsDAO::GoodsDAO()
 {
 
 }
@@ -12,10 +17,10 @@ GoodsDAO::~GoodsDAO()
 
 std::string GoodsDAO::getName(const std::string& barcode)
 {
-	return data->getInfo(barcode)->name;
+	return pDataSource->getInfo(barcode).name;
 }
 
-std::string GoodsDAO::getPrice(const std::string& barcode)
+double GoodsDAO::getPrice(const std::string& barcode)
 {
-	return data[barcode]->price;
+	return pDataSource->getInfo(barcode).price;
 }

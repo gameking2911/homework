@@ -15,13 +15,12 @@ namespace UnitTest
 		TEST_METHOD(should_return_cola_3_when_search_by_ITEM000001)
 		{
 			// TODO: 在此输入测试代码
-			fakeDataSource* data = new fakeDataSource;
-			data->setInfo("ITEM000001", "可口可乐", 3);
-			GoodsDAO* pDao = new GoodsDAO(data);
+			fakeDataSource* pDataSource = new fakeDataSource;
+			pDataSource->setInfo("ITEM000001", "cola", 3.00);
+			GoodsDAO* pDao = new GoodsDAO(pDataSource);
 
-			Assert::AreEqual(std::string("可口可乐"), pDao->getName("ITEM000001"));
-			Assert::AreEqual(3, pDao->getPrice("ITEM000001"));
-
+			Assert::AreEqual(std::string("cola"), pDao->getName("ITEM000001"));
+			Assert::AreEqual(3.00, pDao->getPrice("ITEM000001"));
 		}
 
 	};

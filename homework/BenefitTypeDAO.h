@@ -2,17 +2,19 @@
 #ifndef _BENEFITTYPEDAO_H_
 #define _BENEFITTYPEDAO_H_
 #include "recognition.h"
+#include "BenefitTypeSource.h"
 class BenefitTypeDAO
 {
 public:
-	BenefitTypeDAO(Recognition*);
+	BenefitTypeDAO(BenefitTypeSource*);
+	BenefitTypeDAO();
+
 	virtual ~BenefitTypeDAO();
 
 public:
-	string getName(const std::string&);
-	int getPrice(const std::string&);
+	int getType(const std::string&);
 private:
-	
+	BenefitTypeSource* pDataSource;
 
 };
 

@@ -15,11 +15,11 @@ public:
 	void setPrice(int price);
 
 	std::string getName();
-	int getPrice();
+	double getPrice();
 
 private:
 	std::string m_name;
-	int m_price;
+	double m_price;
 };
 
 #endif

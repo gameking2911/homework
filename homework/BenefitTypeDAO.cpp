@@ -1,6 +1,11 @@
 #include "BenefitTypeDAO.h"
 
-BenefitTypeDAO::BenefitTypeDAO(data)
+BenefitTypeDAO::BenefitTypeDAO(BenefitTypeSource* dataSource)
+{
+	pDataSource = dataSource;
+}
+
+BenefitTypeDAO::BenefitTypeDAO()
 {
 
 }
@@ -10,12 +15,8 @@ BenefitTypeDAO::~BenefitTypeDAO()
 
 }
 
-std::string BenefitTypeDAO::getName(const std::string& barcode)
-{
-	return data->getInfo(barcode)->name;
-}
 
-std::string BenefitTypeDAO::getPrice(const std::string& barcode)
+int BenefitTypeDAO::getType(const std::string& barcode)
 {
-	return data[barcode]->price;
+	return pDataSource->getInfo(barcode).benefit_type;
 }

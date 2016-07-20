@@ -2,20 +2,25 @@
 #ifndef _FAKEBENEFITTYPESOURCE_H_
 #define _FAKEBENEFITTYPESOURCE_H_
 #include <string>
+#include "..\homework\BenefitTypeSource.h"
 
-struct tuple
-{
-	double price;
-	std::string name;
-};
+//struct tuple_benefit
+//{
+//	std::string barcode;
+//	int benefit_type;
+//};
 
-class  fakeBenefitTypeSource
+class  fakeBenefitTypeSource : public BenefitTypeSource
 {
 public:
 	fakeBenefitTypeSource();
 	virtual	~fakeBenefitTypeSource();
 
+	tuple_benefit getInfo(const std::string& Barcode);
+	void setInfo(std::string barcode, int benefit_type);
+
 private:
-	hashset[];
+	tuple_benefit data[10];
+	int length;
 };
 #endif

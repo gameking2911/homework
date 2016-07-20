@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "stubGoodsDAO.h"
 
 stubGoodsDAO::stubGoodsDAO()
@@ -25,7 +26,7 @@ std::string stubGoodsDAO::getName()
 	return m_name;
 }
 
-int stubGoodsDAO::getPrice()
+double stubGoodsDAO::getPrice()
 {
 	return m_price;
 }

@@ -6,13 +6,13 @@
 class ItemGenerator
 {
 public:
-	ItemGenerator(GoodsDAO* gdao, BenefitTypeDAO* bdao);
+	ItemGenerator(GoodsDAO* gdao, BenefitTypeDAO* bdao,Recognition* );
 	virtual ~ItemGenerator();
+
 public:
 
-	double getSum();
-
-	double getSaved();
+	double getSum(const std::string input);
+	double getSaved(const std::string input);
 
 private:
 	double m_sum;
